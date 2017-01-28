@@ -26,9 +26,7 @@
                                    population:@"20.000"];
     City *beograd = [[City alloc] initWithName:@"Beograd"
                                     population:@"2.000.000"];
-    City *noviSad = [[City alloc] initWithName:@"Novi Sad"
-                                    population:@"1.000.000"];
-    self.southCitiesArray = @[vranje, beograd, noviSad];
+    self.southCitiesArray = @[vranje, beograd];
     
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
