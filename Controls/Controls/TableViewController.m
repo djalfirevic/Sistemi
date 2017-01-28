@@ -28,7 +28,7 @@
                                     population:@"2.000.000"];
     self.southCitiesArray = @[vranje, beograd];
     
-    // Remove unnecessary lines at the tableView's bottom
+    // This will clean gray lines
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
