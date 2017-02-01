@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "City.h"
 
 @interface CityCollectionViewCell : UICollectionViewCell
-
+@property (strong, nonatomic) City *city;
 @end

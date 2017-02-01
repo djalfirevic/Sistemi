@@ -73,4 +73,8 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.0f;
+}
+
 @end
