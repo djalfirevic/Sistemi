@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C44B9BA31E45E10F00FE655C /* UIImageView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C44B9BA21E45E10F00FE655C /* UIImageView+Utilities.m */; };
+		C44B9BA61E45E99A00FE655C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44B9BA51E45E99A00FE655C /* WebViewController.m */; };
 		C4E4A5511E45063100B8B954 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E4A5501E45063100B8B954 /* main.m */; };
 		C4E4A5541E45063100B8B954 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E4A5531E45063100B8B954 /* AppDelegate.m */; };
 		C4E4A5571E45063100B8B954 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E4A5561E45063100B8B954 /* HomeViewController.m */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		C44B9BA11E45E10F00FE655C /* UIImageView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Utilities.h"; sourceTree = "<group>"; };
 		C44B9BA21E45E10F00FE655C /* UIImageView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Utilities.m"; sourceTree = "<group>"; };
+		C44B9BA41E45E99A00FE655C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		C44B9BA51E45E99A00FE655C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C4E4A54C1E45063100B8B954 /* Vesti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vesti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E4A5501E45063100B8B954 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4E4A5521E45063100B8B954 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				C4E4A5531E45063100B8B954 /* AppDelegate.m */,
 				C4E4A5551E45063100B8B954 /* HomeViewController.h */,
 				C4E4A5561E45063100B8B954 /* HomeViewController.m */,
+				C44B9BA41E45E99A00FE655C /* WebViewController.h */,
+				C44B9BA51E45E99A00FE655C /* WebViewController.m */,
 				C4E4A5661E4511EC00B8B954 /* Article.h */,
 				C4E4A5671E4511EC00B8B954 /* Article.m */,
 				C4E4A5691E451AC600B8B954 /* ArticleTableViewCell.h */,
@@ -166,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E4A5681E4511EC00B8B954 /* Article.m in Sources */,
+				C44B9BA61E45E99A00FE655C /* WebViewController.m in Sources */,
 				C44B9BA31E45E10F00FE655C /* UIImageView+Utilities.m in Sources */,
 				C4E4A5571E45063100B8B954 /* HomeViewController.m in Sources */,
 				C4E4A5541E45063100B8B954 /* AppDelegate.m in Sources */,

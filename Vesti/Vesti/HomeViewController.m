@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "WebViewController.h"
 #import "Article.h"
 #import "ArticleTableViewCell.h"
 
@@ -75,6 +76,14 @@ static NSString *const URL = @"http://www.brzevesti.net/api/news";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    // Show WebViewController
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    WebViewController *toViewController = [storyboard instantiateViewControllerWithIdentifier:@"WebViewController"];
+
+    Article *article = self.itemsArray[indexPath.row];
+    toViewController.url = article.url;
+    [self.navigationController pushViewController:toViewController animated:YES];
 }
 
 @end
