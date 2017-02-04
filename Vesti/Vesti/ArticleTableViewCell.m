@@ -7,6 +7,7 @@
 //
 
 #import "ArticleTableViewCell.h"
+#import "UIImageView+Utilities.h"
 
 @implementation ArticleTableViewCell
 
@@ -16,6 +17,8 @@
     _article = article;
 
     self.titleLabel.text = article.title;
+    self.portalLabel.text = article.portal;
+    [self.coverImageView loadImageFromURL:article.imageURL];
 }
 
 @end

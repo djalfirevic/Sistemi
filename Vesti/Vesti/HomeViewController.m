@@ -8,13 +8,14 @@
 
 #import "HomeViewController.h"
 #import "Article.h"
+#import "ArticleTableViewCell.h"
 
 //#define URL @"http://www.brzevesti.net/api/news"
 static NSString *const URL = @"http://www.brzevesti.net/api/news";
 
-@interface HomeViewController()
+@interface HomeViewController() <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray *articlesArray;
+@property (strong, nonatomic) NSMutableArray *itemsArray;
 @end
 
 @implementation HomeViewController
@@ -23,20 +24,18 @@ static NSString *const URL = @"http://www.brzevesti.net/api/news";
 
 - (void)loadArticles {
     // Grand Central Dispatch (GCD)
-    dispatch_queue_t downloadQueue = dispatch_queue_create("ArticlesDownloader", nil);
+    dispatch_queue_t downloadQueue = dispatch_queue_create("ArticlesDownloader", NULL);
     dispatch_async(downloadQueue, ^{
         // This code will be executed on BACKGROUND thread
         NSURL *url = [NSURL URLWithString:URL];
         NSData *data = [NSData dataWithContentsOfURL:url];
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"%@", url);
-        NSLog(@"%@", dictionary);
 
-        self.articlesArray = [[NSMutableArray alloc] init];
+        self.itemsArray = [[NSMutableArray alloc] init];
 
         for (NSDictionary *articleDictionary in dictionary[@"news"]) {
             Article *article = [[Article alloc] initWithDictionary:articleDictionary];
-            [self.articlesArray addObject:article];
+            [self.itemsArray addObject:article];
         }
 
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -52,6 +51,30 @@ static NSString *const URL = @"http://www.brzevesti.net/api/news";
     [super viewDidLoad];
 
     [self loadArticles];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.itemsArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ArticleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    cell.article = self.itemsArray[indexPath.row];
+
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
