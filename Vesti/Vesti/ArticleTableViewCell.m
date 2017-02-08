@@ -9,6 +9,12 @@
 #import "ArticleTableViewCell.h"
 #import "UIImageView+Utilities.h"
 
+@interface ArticleTableViewCell()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *portalLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
+@end
+
 @implementation ArticleTableViewCell
 
 #pragma mark - Properties

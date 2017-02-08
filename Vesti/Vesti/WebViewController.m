@@ -28,12 +28,12 @@
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.spinnerView stopAnimating];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
 }
 
 @end

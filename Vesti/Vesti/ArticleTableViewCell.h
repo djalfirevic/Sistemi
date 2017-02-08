@@ -10,8 +10,5 @@
 #import "Article.h"
 
 @interface ArticleTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *portalLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (strong, nonatomic) Article *article;
 @end
