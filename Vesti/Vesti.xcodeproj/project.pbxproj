@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C44B9BA31E45E10F00FE655C /* UIImageView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C44B9BA21E45E10F00FE655C /* UIImageView+Utilities.m */; };
 		C44B9BA61E45E99A00FE655C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44B9BA51E45E99A00FE655C /* WebViewController.m */; };
+		C496FCE91E4BA2D3008ED853 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C496FCE81E4BA2D3008ED853 /* Reachability.m */; };
+		C496FCEC1E4BA37D008ED853 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C496FCEB1E4BA37D008ED853 /* SystemConfiguration.framework */; };
 		C4E4A5511E45063100B8B954 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E4A5501E45063100B8B954 /* main.m */; };
 		C4E4A5541E45063100B8B954 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E4A5531E45063100B8B954 /* AppDelegate.m */; };
 		C4E4A5571E45063100B8B954 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E4A5561E45063100B8B954 /* HomeViewController.m */; };
@@ -24,6 +26,9 @@
 		C44B9BA21E45E10F00FE655C /* UIImageView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Utilities.m"; sourceTree = "<group>"; };
 		C44B9BA41E45E99A00FE655C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		C44B9BA51E45E99A00FE655C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		C496FCE71E4BA2D3008ED853 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C496FCE81E4BA2D3008ED853 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C496FCEB1E4BA37D008ED853 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C4E4A54C1E45063100B8B954 /* Vesti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vesti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E4A5501E45063100B8B954 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4E4A5521E45063100B8B954 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,16 +50,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C496FCEC1E4BA37D008ED853 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C496FCE51E4BA288008ED853 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C4E4A5521E45063100B8B954 /* AppDelegate.h */,
+				C4E4A5531E45063100B8B954 /* AppDelegate.m */,
+			);
+			name = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		C496FCE61E4BA2D3008ED853 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C496FCE71E4BA2D3008ED853 /* Reachability.h */,
+				C496FCE81E4BA2D3008ED853 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		C496FCEA1E4BA37D008ED853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C496FCEB1E4BA37D008ED853 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C4E4A5431E45063100B8B954 = {
 			isa = PBXGroup;
 			children = (
 				C4E4A54E1E45063100B8B954 /* Vesti */,
+				C496FCEA1E4BA37D008ED853 /* Frameworks */,
 				C4E4A54D1E45063100B8B954 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,8 +103,7 @@
 		C4E4A54E1E45063100B8B954 /* Vesti */ = {
 			isa = PBXGroup;
 			children = (
-				C4E4A5521E45063100B8B954 /* AppDelegate.h */,
-				C4E4A5531E45063100B8B954 /* AppDelegate.m */,
+				C496FCE61E4BA2D3008ED853 /* Reachability */,
 				C4E4A5551E45063100B8B954 /* HomeViewController.h */,
 				C4E4A5561E45063100B8B954 /* HomeViewController.m */,
 				C44B9BA41E45E99A00FE655C /* WebViewController.h */,
@@ -83,9 +115,6 @@
 				C44B9BA11E45E10F00FE655C /* UIImageView+Utilities.h */,
 				C44B9BA21E45E10F00FE655C /* UIImageView+Utilities.m */,
 				C4E4A5581E45063100B8B954 /* Main.storyboard */,
-				C4E4A55B1E45063100B8B954 /* Assets.xcassets */,
-				C4E4A55D1E45063100B8B954 /* LaunchScreen.storyboard */,
-				C4E4A5601E45063100B8B954 /* Info.plist */,
 				C4E4A54F1E45063100B8B954 /* Supporting Files */,
 			);
 			path = Vesti;
@@ -94,6 +123,10 @@
 		C4E4A54F1E45063100B8B954 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C496FCE51E4BA288008ED853 /* Application Delegate */,
+				C4E4A5601E45063100B8B954 /* Info.plist */,
+				C4E4A55B1E45063100B8B954 /* Assets.xcassets */,
+				C4E4A55D1E45063100B8B954 /* LaunchScreen.storyboard */,
 				C4E4A5501E45063100B8B954 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -172,6 +205,7 @@
 			files = (
 				C4E4A5681E4511EC00B8B954 /* Article.m in Sources */,
 				C44B9BA61E45E99A00FE655C /* WebViewController.m in Sources */,
+				C496FCE91E4BA2D3008ED853 /* Reachability.m in Sources */,
 				C44B9BA31E45E10F00FE655C /* UIImageView+Utilities.m in Sources */,
 				C4E4A5571E45063100B8B954 /* HomeViewController.m in Sources */,
 				C4E4A5541E45063100B8B954 /* AppDelegate.m in Sources */,
