@@ -13,6 +13,7 @@
 
 //#define URL @"http://www.brzevesti.net/api/news"
 static NSString *const URL = @"http://www.brzevesti.net/api/news";
+static NSString *const STORYBOARD = @"Main";
 
 @interface HomeViewController() <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -78,8 +79,8 @@ static NSString *const URL = @"http://www.brzevesti.net/api/news";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     // Show WebViewController
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    WebViewController *toViewController = [storyboard instantiateViewControllerWithIdentifier:@"WebViewController"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:STORYBOARD bundle:nil];
+    WebViewController *toViewController = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([WebViewController class])];
 
     Article *article = self.itemsArray[indexPath.row];
     toViewController.url = article.url;
