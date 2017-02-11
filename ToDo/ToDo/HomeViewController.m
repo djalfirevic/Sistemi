@@ -53,7 +53,6 @@
 }
 
 - (void)configureUserImage {
-    self.userImageView.layer.cornerRadius = self.userImageView.frame.size.width/2;
 }
 
 #pragma mark - View lifecycle
