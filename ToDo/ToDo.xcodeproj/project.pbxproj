@@ -13,6 +13,7 @@
 		C445CC8C1E01BDD7005A0825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8B1E01BDD7005A0825 /* Assets.xcassets */; };
 		C445CC8F1E01BDD7005A0825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8D1E01BDD7005A0825 /* LaunchScreen.storyboard */; };
 		C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC971E01CA84005A0825 /* LoginViewController.m */; };
+		C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */; };
 		C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49581C11E16D11500B75E1D /* SignUpViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,8 @@
 		C445CC901E01BDD7005A0825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C445CC961E01CA84005A0825 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C445CC971E01CA84005A0825 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C49581C01E16D11500B75E1D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		C49581C11E16D11500B75E1D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +66,8 @@
 			children = (
 				C445CC821E01BDD7005A0825 /* AppDelegate.h */,
 				C445CC831E01BDD7005A0825 /* AppDelegate.m */,
+				C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */,
+				C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */,
 				C445CC961E01CA84005A0825 /* LoginViewController.h */,
 				C445CC971E01CA84005A0825 /* LoginViewController.m */,
 				C49581C01E16D11500B75E1D /* SignUpViewController.h */,
@@ -158,6 +163,7 @@
 				C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */,
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */,
+				C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */,
 				C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
