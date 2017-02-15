@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C444170B1E54C54800A0D3BE /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C444170A1E54C54800A0D3BE /* Helpers.m */; };
 		C445CC811E01BDD7005A0825 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC801E01BDD7005A0825 /* main.m */; };
 		C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC831E01BDD7005A0825 /* AppDelegate.m */; };
 		C445CC8A1E01BDD7005A0825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C445CC881E01BDD7005A0825 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C44417091E54C54800A0D3BE /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		C444170A1E54C54800A0D3BE /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		C445CC7C1E01BDD7005A0825 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C445CC801E01BDD7005A0825 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C445CC821E01BDD7005A0825 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				C445CC971E01CA84005A0825 /* LoginViewController.m */,
 				C49581C01E16D11500B75E1D /* SignUpViewController.h */,
 				C49581C11E16D11500B75E1D /* SignUpViewController.m */,
+				C44417091E54C54800A0D3BE /* Helpers.h */,
+				C444170A1E54C54800A0D3BE /* Helpers.m */,
 				C445CC881E01BDD7005A0825 /* Main.storyboard */,
 				C445CC8B1E01BDD7005A0825 /* Assets.xcassets */,
 				C445CC8D1E01BDD7005A0825 /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 				C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */,
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */,
+				C444170B1E54C54800A0D3BE /* Helpers.m in Sources */,
 				C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */,
 				C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */,
 			);
