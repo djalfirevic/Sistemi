@@ -16,6 +16,7 @@
 		C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC971E01CA84005A0825 /* LoginViewController.m */; };
 		C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */; };
 		C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49581C11E16D11500B75E1D /* SignUpViewController.m */; };
+		C4E41BB31E57857B00288648 /* DateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E41BB21E57857B00288648 /* DateCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C49581C01E16D11500B75E1D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		C49581C11E16D11500B75E1D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		C4E41BB11E57857B00288648 /* DateCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCollectionViewCell.h; sourceTree = "<group>"; };
+		C4E41BB21E57857B00288648 /* DateCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,20 +70,10 @@
 		C445CC7E1E01BDD7005A0825 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				C445CC821E01BDD7005A0825 /* AppDelegate.h */,
-				C445CC831E01BDD7005A0825 /* AppDelegate.m */,
-				C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */,
-				C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */,
-				C445CC961E01CA84005A0825 /* LoginViewController.h */,
-				C445CC971E01CA84005A0825 /* LoginViewController.m */,
-				C49581C01E16D11500B75E1D /* SignUpViewController.h */,
-				C49581C11E16D11500B75E1D /* SignUpViewController.m */,
-				C44417091E54C54800A0D3BE /* Helpers.h */,
-				C444170A1E54C54800A0D3BE /* Helpers.m */,
-				C445CC881E01BDD7005A0825 /* Main.storyboard */,
-				C445CC8B1E01BDD7005A0825 /* Assets.xcassets */,
-				C445CC8D1E01BDD7005A0825 /* LaunchScreen.storyboard */,
-				C445CC901E01BDD7005A0825 /* Info.plist */,
+				C4E41BB01E57853600288648 /* Cells */,
+				C4E41BAD1E57848300288648 /* View Controllers */,
+				C4E41BAE1E5784A600288648 /* Utilities */,
+				C4E41BAF1E5784D900288648 /* Storyboards */,
 				C445CC7F1E01BDD7005A0825 /* Supporting Files */,
 			);
 			path = ToDo;
@@ -89,9 +82,61 @@
 		C445CC7F1E01BDD7005A0825 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4E41BAC1E5783E500288648 /* Application Delegate */,
+				C445CC8B1E01BDD7005A0825 /* Assets.xcassets */,
+				C445CC901E01BDD7005A0825 /* Info.plist */,
 				C445CC801E01BDD7005A0825 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4E41BAC1E5783E500288648 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C445CC821E01BDD7005A0825 /* AppDelegate.h */,
+				C445CC831E01BDD7005A0825 /* AppDelegate.m */,
+			);
+			name = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		C4E41BAD1E57848300288648 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */,
+				C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */,
+				C445CC961E01CA84005A0825 /* LoginViewController.h */,
+				C445CC971E01CA84005A0825 /* LoginViewController.m */,
+				C49581C01E16D11500B75E1D /* SignUpViewController.h */,
+				C49581C11E16D11500B75E1D /* SignUpViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C4E41BAE1E5784A600288648 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C44417091E54C54800A0D3BE /* Helpers.h */,
+				C444170A1E54C54800A0D3BE /* Helpers.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		C4E41BAF1E5784D900288648 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C445CC8D1E01BDD7005A0825 /* LaunchScreen.storyboard */,
+				C445CC881E01BDD7005A0825 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C4E41BB01E57853600288648 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C4E41BB11E57857B00288648 /* DateCollectionViewCell.h */,
+				C4E41BB21E57857B00288648 /* DateCollectionViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */,
+				C4E41BB31E57857B00288648 /* DateCollectionViewCell.m in Sources */,
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */,
 				C444170B1E54C54800A0D3BE /* Helpers.m in Sources */,
