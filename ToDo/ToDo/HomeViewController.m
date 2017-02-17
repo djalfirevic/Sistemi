@@ -58,7 +58,7 @@
 }
 
 - (void)configureUserImage {
-    
+
 }
 
 #pragma mark - View lifecycle
