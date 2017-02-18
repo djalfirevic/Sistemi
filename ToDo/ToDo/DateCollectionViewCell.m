@@ -24,17 +24,18 @@
     _date = date;
 
     self.dayLabel.text = [Helpers valueFrom:date withFormat:@"d"];
-    self.weekdayLabel.text = [Helpers valueFrom:date withFormat:@"EEE"];
+    self.weekdayLabel.text = [self weekday];
+    self.highlightView.hidden = ([Helpers isDate:date sameAsDate:[NSDate date]]) ? NO : YES;
+}
 
-    NSDate *todayDate = [NSDate date];
-    if ([todayDate isEqualToDate:date]) {
-        self.highlightView.hidden = NO;
-    } else {
-        self.highlightView.hidden = YES;
-    }
+#pragma mark - Private API
 
-    // Ternary operator
-    self.highlightView.hidden = ([todayDate isEqualToDate:date]) ? NO : YES;
+- (NSString *)weekday {
+    NSString *string = [Helpers valueFrom:self.date withFormat:@"EEEE"];
+    string = string.uppercaseString;
+    string = [string substringToIndex:3];
+
+    return string;
 }
 
 @end
