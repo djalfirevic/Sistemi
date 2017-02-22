@@ -14,6 +14,7 @@
 		C445CC8C1E01BDD7005A0825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8B1E01BDD7005A0825 /* Assets.xcassets */; };
 		C445CC8F1E01BDD7005A0825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8D1E01BDD7005A0825 /* LaunchScreen.storyboard */; };
 		C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC971E01CA84005A0825 /* LoginViewController.m */; };
+		C466A0B31E5E1E1300B05805 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C466A0B21E5E1E1300B05805 /* TaskViewController.m */; };
 		C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */; };
 		C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49581C11E16D11500B75E1D /* SignUpViewController.m */; };
 		C4E41BB31E57857B00288648 /* DateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E41BB21E57857B00288648 /* DateCollectionViewCell.m */; };
@@ -32,6 +33,8 @@
 		C445CC901E01BDD7005A0825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C445CC961E01CA84005A0825 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C445CC971E01CA84005A0825 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C466A0B11E5E1E1300B05805 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
+		C466A0B21E5E1E1300B05805 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
 		C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C49581C01E16D11500B75E1D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -102,12 +105,14 @@
 		C4E41BAD1E57848300288648 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */,
-				C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */,
 				C445CC961E01CA84005A0825 /* LoginViewController.h */,
 				C445CC971E01CA84005A0825 /* LoginViewController.m */,
 				C49581C01E16D11500B75E1D /* SignUpViewController.h */,
 				C49581C11E16D11500B75E1D /* SignUpViewController.m */,
+				C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */,
+				C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */,
+				C466A0B11E5E1E1300B05805 /* TaskViewController.h */,
+				C466A0B21E5E1E1300B05805 /* TaskViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */,
+				C466A0B31E5E1E1300B05805 /* TaskViewController.m in Sources */,
 				C4E41BB31E57857B00288648 /* DateCollectionViewCell.m in Sources */,
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */,
