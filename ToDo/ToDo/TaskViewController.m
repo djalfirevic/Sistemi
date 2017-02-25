@@ -28,7 +28,7 @@
 }
 
 - (IBAction)addButtonTapped:(UIButton *)sender {
-
+    
 }
 
 - (IBAction)groupButtonTapped:(UIButton *)sender {
@@ -39,6 +39,15 @@
             }];
         }
     }
+}
+
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    // Ako imas lokaciju, daj mi naziv grada u kome se ti nalazis...
+    
 }
 
 #pragma mark - UITextFieldDelegate

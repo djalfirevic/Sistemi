@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>ToDo needs access to your camera.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ToDo needs access to your location.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>ToDo needs access to your photo library.</string>
 	<key>UIMainStoryboardFile</key>
