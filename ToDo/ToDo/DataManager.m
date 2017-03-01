@@ -26,7 +26,7 @@
 
             self.userLocality = placemark.locality;
 
-            NSLog(@"ISOcountryCode: %@", placemark.ISOcountryCode);
+            NSLog(@"ISO country code: %@", placemark.ISOcountryCode);
             NSLog(@"Country: %@", placemark.country);
             NSLog(@"Postal code: %@", placemark.postalCode);
             NSLog(@"Administrative area: %@", placemark.administrativeArea);
@@ -35,6 +35,18 @@
             NSLog(@"Sub thoroughfare: %@", placemark.subThoroughfare);
          }
      }];
+}
+
+- (void)setUserLocality:(NSString *)userLocality {
+    _userLocality = userLocality;
+
+    // Via delegate
+    if (self.delegate) {
+        [self.delegate dataManagerDidUpdateLocality];
+    }
+
+    // Via notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:LOCALITY_UPDATED_NOTIFICATION object:nil];
 }
 
 #pragma mark - Designated Initializer

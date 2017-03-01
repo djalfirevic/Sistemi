@@ -9,7 +9,7 @@
 #import "TaskViewController.h"
 #import <MapKit/MapKit.h>
 
-@interface TaskViewController() <UITextFieldDelegate>
+@interface TaskViewController() <UITextFieldDelegate, DataManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
@@ -46,8 +46,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Ako imas lokaciju, daj mi naziv grada u kome se ti nalazis...
-    
+    self.locationLabel.text = [DataManager sharedManager].userLocality;
+
+    // Via delegate
+    [DataManager sharedManager].delegate = self;
+
+    // Via notification
+    [[NSNotificationCenter defaultCenter] addObserverForName:LOCALITY_UPDATED_NOTIFICATION object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        self.locationLabel.text = [DataManager sharedManager].userLocality;
+    }];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -56,6 +69,12 @@
     [textField resignFirstResponder];
 
     return YES;
+}
+
+#pragma mark - DataManagerDelegate
+
+- (void)dataManagerDidUpdateLocality {
+    self.locationLabel.text = [DataManager sharedManager].userLocality;
 }
 
 @end
