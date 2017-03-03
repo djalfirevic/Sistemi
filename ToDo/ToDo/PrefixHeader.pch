@@ -14,5 +14,8 @@
 #import "Constants.h"
 #import "Helpers.h"
 #import "DataManager.h"
+#import "DBTask+CoreDataClass.h"
+#import "DBTask+CoreDataProperties.h"
+#import "DBTask+Utilities.h"
 
 #endif /* PrefixHeader_pch */

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C436DC5F1E6A02DE0090454C /* DBTask+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C436DC5E1E6A02DE0090454C /* DBTask+Utilities.m */; };
 		C444170B1E54C54800A0D3BE /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C444170A1E54C54800A0D3BE /* Helpers.m */; };
 		C445CC811E01BDD7005A0825 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC801E01BDD7005A0825 /* main.m */; };
 		C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC831E01BDD7005A0825 /* AppDelegate.m */; };
@@ -23,9 +24,14 @@
 		C4BECFAB1E6189F000E44C88 /* Sistemi, Serbia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C4BECFAA1E6189F000E44C88 /* Sistemi, Serbia.gpx */; };
 		C4D93E6B1E60B3F700363C35 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D93E6A1E60B3F700363C35 /* MapKit.framework */; };
 		C4E41BB31E57857B00288648 /* DateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E41BB21E57857B00288648 /* DateCollectionViewCell.m */; };
+		C4EB6C541E69E56B00FF3A27 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4EB6C521E69E56B00FF3A27 /* ToDo.xcdatamodeld */; };
+		C4EB6C821E69EC9400FF3A27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EB6C811E69EC9400FF3A27 /* CoreData.framework */; };
+		C4EB6C851E69F8F900FF3A27 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB6C841E69F8F900FF3A27 /* TaskTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C436DC5D1E6A02DE0090454C /* DBTask+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBTask+Utilities.h"; sourceTree = "<group>"; };
+		C436DC5E1E6A02DE0090454C /* DBTask+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBTask+Utilities.m"; sourceTree = "<group>"; };
 		C44417091E54C54800A0D3BE /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		C444170A1E54C54800A0D3BE /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		C445CC7C1E01BDD7005A0825 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +61,10 @@
 		C4D93E6D1E60B86B00363C35 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C4E41BB11E57857B00288648 /* DateCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCollectionViewCell.h; sourceTree = "<group>"; };
 		C4E41BB21E57857B00288648 /* DateCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCollectionViewCell.m; sourceTree = "<group>"; };
+		C4EB6C531E69E56B00FF3A27 /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
+		C4EB6C811E69EC9400FF3A27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C4EB6C831E69F8F900FF3A27 /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
+		C4EB6C841E69F8F900FF3A27 /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EB6C821E69EC9400FF3A27 /* CoreData.framework in Frameworks */,
 				C4BECFA61E617A8D00E44C88 /* CoreLocation.framework in Frameworks */,
 				C4D93E6B1E60B3F700363C35 /* MapKit.framework in Frameworks */,
 			);
@@ -116,8 +127,11 @@
 		C4B1900E1E674CFA000DD274 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C4EB6C521E69E56B00FF3A27 /* ToDo.xcdatamodeld */,
 				C4B1900F1E674DA4000DD274 /* User.h */,
 				C4B190101E674DA4000DD274 /* User.m */,
+				C436DC5D1E6A02DE0090454C /* DBTask+Utilities.h */,
+				C436DC5E1E6A02DE0090454C /* DBTask+Utilities.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -125,6 +139,7 @@
 		C4D93E691E60B3F700363C35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4EB6C811E69EC9400FF3A27 /* CoreData.framework */,
 				C4BECFA51E617A8D00E44C88 /* CoreLocation.framework */,
 				C4D93E6A1E60B3F700363C35 /* MapKit.framework */,
 			);
@@ -181,6 +196,8 @@
 			children = (
 				C4E41BB11E57857B00288648 /* DateCollectionViewCell.h */,
 				C4E41BB21E57857B00288648 /* DateCollectionViewCell.m */,
+				C4EB6C831E69F8F900FF3A27 /* TaskTableViewCell.h */,
+				C4EB6C841E69F8F900FF3A27 /* TaskTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -269,8 +286,11 @@
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */,
 				C444170B1E54C54800A0D3BE /* Helpers.m in Sources */,
+				C436DC5F1E6A02DE0090454C /* DBTask+Utilities.m in Sources */,
 				C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */,
 				C4BECFA91E61832600E44C88 /* DataManager.m in Sources */,
+				C4EB6C851E69F8F900FF3A27 /* TaskTableViewCell.m in Sources */,
+				C4EB6C541E69E56B00FF3A27 /* ToDo.xcdatamodeld in Sources */,
 				C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +453,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C4EB6C521E69E56B00FF3A27 /* ToDo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C4EB6C531E69E56B00FF3A27 /* ToDo.xcdatamodel */,
+			);
+			currentVersion = C4EB6C531E69E56B00FF3A27 /* ToDo.xcdatamodel */;
+			path = ToDo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C445CC741E01BDD7005A0825 /* Project object */;
 }
