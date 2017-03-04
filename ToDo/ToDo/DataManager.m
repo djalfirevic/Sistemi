@@ -90,7 +90,6 @@
     // Sorting
     if (sortKey != nil) {
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:sortAscending];
-        //NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
         NSArray *sortDescriptors = @[sortDescriptor];
         [fetchRequest setSortDescriptors:sortDescriptors];
     }
@@ -102,8 +101,6 @@
     }
 
     NSError *error;
-    //NSMutableArray *resultsArray = [[self.managedObjectContext executeFetchRequest:fetchRequest error:&error] mutableCopy];
-
     NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     NSMutableArray *resultsArray = [NSMutableArray arrayWithArray:array];
 
@@ -114,23 +111,15 @@
 
 - (void)deleteObject:(NSManagedObject *)object {
     [self.managedObjectContext deleteObject:object];
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-
-    if ([appDelegate respondsToSelector:@selector(saveContext)]) {
-        [appDelegate saveContext];
-    }
+    [self.managedObjectContext save:nil];
 }
 
 - (void)updateObject:(NSManagedObject *)object {
-    NSError *error = nil;
-    if ([object.managedObjectContext hasChanges] && ![object.managedObjectContext save:&error]) {
-        NSLog(@"Error updating object in database: %@, %@", [error localizedDescription], [error userInfo]);
-        abort();
-    }
+    [object.managedObjectContext save:nil];
 }
 
 - (void)logObject:(NSManagedObject *)object {
-    NSEntityDescription *description = [object entity];
+    NSEntityDescription *description = object.entity;
     NSDictionary *attributes = [description attributesByName];
 
     for (NSString *attribute in attributes) {
@@ -163,7 +152,8 @@
     task.date = [NSDate date];
     task.group = group;
 
-    [self saveToDatabase];
+    // Save
+    [task.managedObjectContext save:nil];
 }
 
 @end
