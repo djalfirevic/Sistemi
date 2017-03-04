@@ -10,7 +10,7 @@
 
 @implementation DBTask (Utilities)
 
-#pragma mark - Properties
+#pragma mark - Public API
 
 - (UIColor *)groupColor {
     if (self.group == TaskGroupCompleted) {
