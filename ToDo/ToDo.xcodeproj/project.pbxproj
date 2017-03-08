@@ -15,6 +15,7 @@
 		C445CC8C1E01BDD7005A0825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8B1E01BDD7005A0825 /* Assets.xcassets */; };
 		C445CC8F1E01BDD7005A0825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8D1E01BDD7005A0825 /* LaunchScreen.storyboard */; };
 		C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC971E01CA84005A0825 /* LoginViewController.m */; };
+		C45378591E708FFD00FED9FC /* UIViewController+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C45378581E708FFD00FED9FC /* UIViewController+Utilities.m */; };
 		C466A0B31E5E1E1300B05805 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C466A0B21E5E1E1300B05805 /* TaskViewController.m */; };
 		C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */; };
 		C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49581C11E16D11500B75E1D /* SignUpViewController.m */; };
@@ -44,6 +45,8 @@
 		C445CC901E01BDD7005A0825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C445CC961E01CA84005A0825 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C445CC971E01CA84005A0825 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C45378571E708FFD00FED9FC /* UIViewController+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utilities.h"; sourceTree = "<group>"; };
+		C45378581E708FFD00FED9FC /* UIViewController+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utilities.m"; sourceTree = "<group>"; };
 		C466A0B11E5E1E1300B05805 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
 		C466A0B21E5E1E1300B05805 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
 		C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				C444170A1E54C54800A0D3BE /* Helpers.m */,
 				C4BECFA71E61832600E44C88 /* DataManager.h */,
 				C4BECFA81E61832600E44C88 /* DataManager.m */,
+				C45378571E708FFD00FED9FC /* UIViewController+Utilities.h */,
+				C45378581E708FFD00FED9FC /* UIViewController+Utilities.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				C444170B1E54C54800A0D3BE /* Helpers.m in Sources */,
 				C436DC5F1E6A02DE0090454C /* DBTask+Utilities.m in Sources */,
 				C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */,
+				C45378591E708FFD00FED9FC /* UIViewController+Utilities.m in Sources */,
 				C4BECFA91E61832600E44C88 /* DataManager.m in Sources */,
 				C4EB6C851E69F8F900FF3A27 /* TaskTableViewCell.m in Sources */,
 				C4EB6C541E69E56B00FF3A27 /* ToDo.xcdatamodeld in Sources */,

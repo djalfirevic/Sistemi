@@ -31,13 +31,13 @@
 
             self.userLocality = placemark.locality;
 
-            NSLog(@"ISO country code: %@", placemark.ISOcountryCode);
+            /*NSLog(@"ISO country code: %@", placemark.ISOcountryCode);
             NSLog(@"Country: %@", placemark.country);
             NSLog(@"Postal code: %@", placemark.postalCode);
             NSLog(@"Administrative area: %@", placemark.administrativeArea);
             NSLog(@"Locality: %@", placemark.locality);
             NSLog(@"Sub locality; %@", placemark.subLocality);
-            NSLog(@"Sub thoroughfare: %@", placemark.subThoroughfare);
+            NSLog(@"Sub thoroughfare: %@", placemark.subThoroughfare);*/
          }
      }];
 }
@@ -79,32 +79,33 @@
 
 #pragma mark - Public API
 
-- (NSMutableArray *)fetchEntity:(NSString *)entityName
-                     withFilter:(NSString *)filter
-                    withSortAsc:(BOOL)sortAscending
-                         forKey:(NSString *)sortKey {
+- (NSArray *)fetchEntity:(NSString *)entityName
+              withFilter:(NSString *)filter
+             withSortAsc:(BOOL)sortAscending
+                  forKey:(NSString *)sortKey {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entityDescription];
 
     // Sorting
-    if (sortKey != nil) {
+    if (sortKey) {
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:sortAscending];
-        NSArray *sortDescriptors = @[sortDescriptor];
-        [fetchRequest setSortDescriptors:sortDescriptors];
+        [fetchRequest setSortDescriptors:@[sortDescriptor]];
     }
 
     // Filtering
-    if (filter != nil) {
+    if (filter) {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:filter];
         [fetchRequest setPredicate:predicate];
     }
 
+    // Execute fetch request
     NSError *error;
-    NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    NSMutableArray *resultsArray = [NSMutableArray arrayWithArray:array];
+    NSArray *resultsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
 
-    if (resultsArray == nil) NSLog(@"Error fetching %@(s).", entityName);
+    if (error) {
+        NSLog(@"Error fetching: %@", error.localizedDescription);
+    }
 
     return resultsArray;
 }
@@ -128,8 +129,10 @@
 }
 
 - (NSInteger)numberOfTasksPerTaskGroup:(TaskGroup)group {
-    NSArray *tasksArray = [self fetchEntity:NSStringFromClass([DBTask class])
-                                 withFilter:[NSString stringWithFormat:@"group = %ld", group]
+    NSString *filter = [NSString stringWithFormat:@"group = %ld", group];
+
+    NSArray *tasksArray = [self fetchEntity:NSStringFromClass(DBTask.class)
+                                 withFilter:filter
                                 withSortAsc:NO
                                      forKey:nil];
 
@@ -139,7 +142,7 @@
 - (void)saveTaskWithTitle:(NSString *)title
               description:(NSString *)description
                     group:(NSInteger)group {
-    DBTask *task = (DBTask *)[NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DBTask class])
+    DBTask *task = (DBTask *)[NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(DBTask.class)
                                                        inManagedObjectContext:self.managedObjectContext];
     task.title = title;
     task.desc = description;
@@ -149,7 +152,11 @@
         task.longitude = self.userLocation.coordinate.longitude;
     }
 
-    task.date = [NSDate date];
+    // Date
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = DATE_FORMAT;
+    task.date = [dateFormatter stringFromDate:[NSDate date]];
+
     task.group = group;
 
     // Save

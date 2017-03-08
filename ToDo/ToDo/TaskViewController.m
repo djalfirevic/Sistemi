@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *selectorImageView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *viewsArray;
+@property (nonatomic) NSInteger group;
 @end
 
 @implementation TaskViewController
@@ -28,10 +29,18 @@
 }
 
 - (IBAction)addButtonTapped:(UIButton *)sender {
-    
+    if ([self validationPassed]) {
+        [[DataManager sharedManager] saveTaskWithTitle:self.titleTextField.text
+                                           description:self.descriptionTextField.text
+                                                 group:self.group];
+
+        [self backButtonTapped:nil];
+    }
 }
 
 - (IBAction)groupButtonTapped:(UIButton *)sender {
+    self.group = sender.tag;
+
     for (UIView *view in self.viewsArray) {
         if (view.tag == sender.tag) {
             [UIView animateWithDuration:kAnimationDuration animations:^{
@@ -41,11 +50,30 @@
     }
 }
 
+#pragma mark - Private API
+
+- (BOOL)validationPassed {
+    if (self.titleTextField.text.length == 0) {
+        [self showAlertWithTitle:@"Error"
+                      andMessage:@"Please enter task title"];
+        return NO;
+    }
+
+    if (self.descriptionTextField.text.length == 0) {
+        [self showAlertWithTitle:@"Error"
+                      andMessage:@"Please enter task description"];
+        return NO;
+    }
+
+    return YES;
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.group = TaskGroupNotCompleted;
     self.locationLabel.text = [DataManager sharedManager].userLocality;
 
     // Via delegate
