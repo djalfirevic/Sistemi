@@ -69,22 +69,67 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="SUb-Ai-7LD"/>
                                 </connections>
                             </webView>
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t55-ZU-iCg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="BRV-RD-Uei" style="IBUITableViewCellStyleDefault" id="sU3-Tt-ISA">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sU3-Tt-ISA" id="via-M1-2AN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRV-RD-Uei">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="enF-eV-RNa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cF0-rV-cGa"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biQ-ZN-1fe">
+                                <rect key="frame" x="316" y="617" width="39" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="WLQ-rA-hA1"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Szq-wc-rjZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Dfh-MH-ZIF" firstAttribute="top" secondItem="BL0-t3-CKl" secondAttribute="bottom" constant="8" id="0OK-Z1-Tga"/>
+                            <constraint firstItem="t55-ZU-iCg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Ut-tB-AEZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="biQ-ZN-1fe" secondAttribute="bottom" constant="20" id="5ie-tx-8NV"/>
                             <constraint firstItem="BL0-t3-CKl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6l2-Qy-sFh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7MT-3B-Rh1" secondAttribute="bottom" id="9fA-cz-Yip"/>
+                            <constraint firstItem="t55-ZU-iCg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CDL-oy-mll"/>
+                            <constraint firstAttribute="trailing" secondItem="biQ-ZN-1fe" secondAttribute="trailing" constant="20" id="JKp-N6-UBF"/>
                             <constraint firstItem="Dfh-MH-ZIF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JqY-s4-Dnv"/>
                             <constraint firstItem="7MT-3B-Rh1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mrb-IZ-GGn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t55-ZU-iCg" secondAttribute="bottom" id="R4k-R0-lgQ"/>
                             <constraint firstAttribute="trailing" secondItem="7MT-3B-Rh1" secondAttribute="trailing" id="b2r-ky-I9c"/>
                             <constraint firstItem="7MT-3B-Rh1" firstAttribute="top" secondItem="Dfh-MH-ZIF" secondAttribute="bottom" id="cvL-oo-66S"/>
                             <constraint firstItem="BL0-t3-CKl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="dLh-Df-By1"/>
                             <constraint firstAttribute="trailing" secondItem="Dfh-MH-ZIF" secondAttribute="trailing" id="gZg-UE-aGg"/>
+                            <constraint firstAttribute="trailing" secondItem="t55-ZU-iCg" secondAttribute="trailing" id="oYS-W3-wyw"/>
                             <constraint firstAttribute="trailing" secondItem="BL0-t3-CKl" secondAttribute="trailing" constant="8" id="sld-G6-3b8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="biQ-ZN-1fe" id="cxR-K4-Mya"/>
+                        <outlet property="tableView" destination="t55-ZU-iCg" id="XXJ-SH-eSg"/>
                         <outlet property="urlTextField" destination="BL0-t3-CKl" id="DzY-AR-bZy"/>
                         <outlet property="webView" destination="Dfh-MH-ZIF" id="hBk-Tt-1OE"/>
                     </connections>
