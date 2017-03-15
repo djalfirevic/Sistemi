@@ -21,10 +21,10 @@
 @property (weak, nonatomic) id<DataManagerDelegate> delegate;
 
 + (instancetype)sharedManager;
-- (NSArray *)fetchEntity:(NSString *)entityName
-              withFilter:(NSString *)filter
-             withSortAsc:(BOOL)sortAscending
-                  forKey:(NSString *)sortKey;
+- (NSMutableArray *)fetchEntity:(NSString *)entityName
+                     withFilter:(NSString *)filter
+                    withSortAsc:(BOOL)sortAscending
+                         forKey:(NSString *)sortKey;
 - (void)deleteObject:(NSManagedObject *)object;
 - (void)updateObject:(NSManagedObject *)object;
 - (void)logObject:(NSManagedObject *)object;
