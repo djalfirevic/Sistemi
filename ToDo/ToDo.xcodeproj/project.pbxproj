@@ -28,6 +28,9 @@
 		C4EB6C541E69E56B00FF3A27 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4EB6C521E69E56B00FF3A27 /* ToDo.xcdatamodeld */; };
 		C4EB6C821E69EC9400FF3A27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EB6C811E69EC9400FF3A27 /* CoreData.framework */; };
 		C4EB6C851E69F8F900FF3A27 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB6C841E69F8F900FF3A27 /* TaskTableViewCell.m */; };
+		C4FF5DD61E7C527900FE77B0 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FF5DD51E7C527900FE77B0 /* ContainerViewController.m */; };
+		C4FF5DD91E7C52C300FE77B0 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FF5DD81E7C52C300FE77B0 /* SideMenuViewController.m */; };
+		C4FF5DDC1E7C611400FE77B0 /* SideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FF5DDB1E7C611400FE77B0 /* SideMenuTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,12 @@
 		C4EB6C811E69EC9400FF3A27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C4EB6C831E69F8F900FF3A27 /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		C4EB6C841E69F8F900FF3A27 /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
+		C4FF5DD41E7C527900FE77B0 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		C4FF5DD51E7C527900FE77B0 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		C4FF5DD71E7C52C300FE77B0 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		C4FF5DD81E7C52C300FE77B0 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		C4FF5DDA1E7C611400FE77B0 /* SideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuTableViewCell.h; sourceTree = "<group>"; };
+		C4FF5DDB1E7C611400FE77B0 /* SideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +178,10 @@
 				C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */,
 				C466A0B11E5E1E1300B05805 /* TaskViewController.h */,
 				C466A0B21E5E1E1300B05805 /* TaskViewController.m */,
+				C4FF5DD41E7C527900FE77B0 /* ContainerViewController.h */,
+				C4FF5DD51E7C527900FE77B0 /* ContainerViewController.m */,
+				C4FF5DD71E7C52C300FE77B0 /* SideMenuViewController.h */,
+				C4FF5DD81E7C52C300FE77B0 /* SideMenuViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -203,6 +216,8 @@
 				C4E41BB21E57857B00288648 /* DateCollectionViewCell.m */,
 				C4EB6C831E69F8F900FF3A27 /* TaskTableViewCell.h */,
 				C4EB6C841E69F8F900FF3A27 /* TaskTableViewCell.m */,
+				C4FF5DDA1E7C611400FE77B0 /* SideMenuTableViewCell.h */,
+				C4FF5DDB1E7C611400FE77B0 /* SideMenuTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -290,14 +305,17 @@
 				C4E41BB31E57857B00288648 /* DateCollectionViewCell.m in Sources */,
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */,
+				C4FF5DDC1E7C611400FE77B0 /* SideMenuTableViewCell.m in Sources */,
 				C444170B1E54C54800A0D3BE /* Helpers.m in Sources */,
 				C436DC5F1E6A02DE0090454C /* DBTask+Utilities.m in Sources */,
 				C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */,
 				C45378591E708FFD00FED9FC /* UIViewController+Utilities.m in Sources */,
 				C4BECFA91E61832600E44C88 /* DataManager.m in Sources */,
 				C4EB6C851E69F8F900FF3A27 /* TaskTableViewCell.m in Sources */,
+				C4FF5DD91E7C52C300FE77B0 /* SideMenuViewController.m in Sources */,
 				C4EB6C541E69E56B00FF3A27 /* ToDo.xcdatamodeld in Sources */,
 				C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */,
+				C4FF5DD61E7C527900FE77B0 /* ContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
