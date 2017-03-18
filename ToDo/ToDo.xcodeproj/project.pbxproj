@@ -18,6 +18,8 @@
 		C45378591E708FFD00FED9FC /* UIViewController+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C45378581E708FFD00FED9FC /* UIViewController+Utilities.m */; };
 		C466A0B31E5E1E1300B05805 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C466A0B21E5E1E1300B05805 /* TaskViewController.m */; };
 		C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */; };
+		C476BD461E7D477500EE6E0B /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C476BD451E7D477500EE6E0B /* StatisticsViewController.m */; };
+		C476BD491E7D47BC00EE6E0B /* WalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C476BD481E7D47BC00EE6E0B /* WalkthroughViewController.m */; };
 		C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49581C11E16D11500B75E1D /* SignUpViewController.m */; };
 		C4B190111E674DA4000DD274 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B190101E674DA4000DD274 /* User.m */; };
 		C4BECFA61E617A8D00E44C88 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BECFA51E617A8D00E44C88 /* CoreLocation.framework */; };
@@ -54,6 +56,10 @@
 		C466A0B21E5E1E1300B05805 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
 		C47366CB1E4F0FB0003B50E0 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C47366CC1E4F0FB0003B50E0 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C476BD441E7D477500EE6E0B /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		C476BD451E7D477500EE6E0B /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		C476BD471E7D47BC00EE6E0B /* WalkthroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkthroughViewController.h; sourceTree = "<group>"; };
+		C476BD481E7D47BC00EE6E0B /* WalkthroughViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkthroughViewController.m; sourceTree = "<group>"; };
 		C49581C01E16D11500B75E1D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		C49581C11E16D11500B75E1D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		C4B1900F1E674DA4000DD274 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -182,6 +188,10 @@
 				C4FF5DD51E7C527900FE77B0 /* ContainerViewController.m */,
 				C4FF5DD71E7C52C300FE77B0 /* SideMenuViewController.h */,
 				C4FF5DD81E7C52C300FE77B0 /* SideMenuViewController.m */,
+				C476BD441E7D477500EE6E0B /* StatisticsViewController.h */,
+				C476BD451E7D477500EE6E0B /* StatisticsViewController.m */,
+				C476BD471E7D47BC00EE6E0B /* WalkthroughViewController.h */,
+				C476BD481E7D47BC00EE6E0B /* WalkthroughViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -302,6 +312,7 @@
 				C4B190111E674DA4000DD274 /* User.m in Sources */,
 				C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */,
 				C466A0B31E5E1E1300B05805 /* TaskViewController.m in Sources */,
+				C476BD461E7D477500EE6E0B /* StatisticsViewController.m in Sources */,
 				C4E41BB31E57857B00288648 /* DateCollectionViewCell.m in Sources */,
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */,
@@ -314,6 +325,7 @@
 				C4EB6C851E69F8F900FF3A27 /* TaskTableViewCell.m in Sources */,
 				C4FF5DD91E7C52C300FE77B0 /* SideMenuViewController.m in Sources */,
 				C4EB6C541E69E56B00FF3A27 /* ToDo.xcdatamodeld in Sources */,
+				C476BD491E7D47BC00EE6E0B /* WalkthroughViewController.m in Sources */,
 				C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */,
 				C4FF5DD61E7C527900FE77B0 /* ContainerViewController.m in Sources */,
 			);

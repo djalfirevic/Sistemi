@@ -23,8 +23,8 @@ typedef NS_ENUM(NSInteger, TaskGroup) {
 static NSString *const DATE_FORMAT =    @"yyyy-MM-dd";
 
 // Macros
-#define DATA_MANAGER [DataManager sharedManager]
-#define COLOR(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define DATA_MANAGER        [DataManager sharedManager]
+#define COLOR(r, g, b, a)   [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 // Colors
 #define kColorCompleted     COLOR(73.0, 211.0, 194.0, 1.0)
@@ -35,6 +35,7 @@ static NSString *const DATE_FORMAT =    @"yyyy-MM-dd";
 static NSString *const LOCALITY_UPDATED_NOTIFICATION    = @"LOCALITY_UPDATED_NOTIFICATION";
 static NSString *const OPEN_SIDE_MENU_NOTIFICATION      = @"OPEN_SIDE_MENU_NOTIFICATION";
 static NSString *const CLOSE_SIDE_MENU_NOTIFICATION     = @"CLOSE_SIDE_MENU_NOTIFICATION";
+static NSString *const OPEN_VC_NOTIFICATION             = @"OPEN_VC_NOTIFICATION";
 
 // User defaults
 static NSString *const USER_IMAGE = @"USER_IMAGE";

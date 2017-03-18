@@ -12,9 +12,16 @@
 @interface ContainerViewController()
 @property (strong, nonatomic) UIButton *overlayButton;
 @property (strong, nonatomic) SideMenuViewController *sideMenuViewController;
+@property (strong, nonatomic) UINavigationController *homeNavigationController;
 @end
 
 @implementation ContainerViewController
+
+#pragma mark - Public API
+
+- (void)openViewController:(UIViewController *)viewController {
+    [self.homeNavigationController pushViewController:viewController animated:YES];
+}
 
 #pragma mark - Actions
 
@@ -25,12 +32,14 @@
 #pragma mark - Private API
 
 - (void)configureHomeViewController {
-    UIViewController *viewController = [Helpers initViewControllerFrom:@"HomeViewController"];
+    UINavigationController *navigationController = (UINavigationController *)[Helpers initViewControllerFrom:@"HomeNavigationController"];
 
     // View controller containment.
-    [self addChildViewController:viewController];
-    [self.view addSubview:viewController.view];
-    [viewController didMoveToParentViewController:self];
+    [self addChildViewController:navigationController];
+    [self.view addSubview:navigationController.view];
+    [navigationController didMoveToParentViewController:self];
+
+    self.homeNavigationController = navigationController;
 }
 
 - (void)configureOverlayButton {
@@ -58,6 +67,7 @@
     viewController.view.frame = frame;
 
     self.sideMenuViewController = (SideMenuViewController *)viewController;
+    self.sideMenuViewController.containerViewController = self;
 }
 
 - (void)registerForNotifications {
@@ -85,6 +95,14 @@
                 self.overlayButton.alpha = 0.0f;
             }];
         }];
+    }];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:OPEN_VC_NOTIFICATION object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+
+        if ([note.object isKindOfClass:UIViewController.class]) {
+            UIViewController *toViewController = (UIViewController *)note.object;
+            [self.homeNavigationController pushViewController:toViewController animated:YES];
+        }
     }];
 }
 
