@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4149C431E8593FD005EF93E /* WalkthroughCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4149C421E8593FD005EF93E /* WalkthroughCollectionViewCell.m */; };
+		C4149C461E85975E005EF93E /* WalkthroughItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C4149C451E85975E005EF93E /* WalkthroughItem.m */; };
 		C436DC5F1E6A02DE0090454C /* DBTask+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C436DC5E1E6A02DE0090454C /* DBTask+Utilities.m */; };
 		C444170B1E54C54800A0D3BE /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C444170A1E54C54800A0D3BE /* Helpers.m */; };
 		C445CC811E01BDD7005A0825 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC801E01BDD7005A0825 /* main.m */; };
@@ -36,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4149C411E8593FD005EF93E /* WalkthroughCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkthroughCollectionViewCell.h; sourceTree = "<group>"; };
+		C4149C421E8593FD005EF93E /* WalkthroughCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkthroughCollectionViewCell.m; sourceTree = "<group>"; };
+		C4149C441E85975E005EF93E /* WalkthroughItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkthroughItem.h; sourceTree = "<group>"; };
+		C4149C451E85975E005EF93E /* WalkthroughItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkthroughItem.m; sourceTree = "<group>"; };
 		C436DC5D1E6A02DE0090454C /* DBTask+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBTask+Utilities.h"; sourceTree = "<group>"; };
 		C436DC5E1E6A02DE0090454C /* DBTask+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBTask+Utilities.m"; sourceTree = "<group>"; };
 		C44417091E54C54800A0D3BE /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
@@ -150,6 +156,8 @@
 				C4B190101E674DA4000DD274 /* User.m */,
 				C436DC5D1E6A02DE0090454C /* DBTask+Utilities.h */,
 				C436DC5E1E6A02DE0090454C /* DBTask+Utilities.m */,
+				C4149C441E85975E005EF93E /* WalkthroughItem.h */,
+				C4149C451E85975E005EF93E /* WalkthroughItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -228,6 +236,8 @@
 				C4EB6C841E69F8F900FF3A27 /* TaskTableViewCell.m */,
 				C4FF5DDA1E7C611400FE77B0 /* SideMenuTableViewCell.h */,
 				C4FF5DDB1E7C611400FE77B0 /* SideMenuTableViewCell.m */,
+				C4149C411E8593FD005EF93E /* WalkthroughCollectionViewCell.h */,
+				C4149C421E8593FD005EF93E /* WalkthroughCollectionViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -315,6 +325,7 @@
 				C476BD461E7D477500EE6E0B /* StatisticsViewController.m in Sources */,
 				C4E41BB31E57857B00288648 /* DateCollectionViewCell.m in Sources */,
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
+				C4149C461E85975E005EF93E /* WalkthroughItem.m in Sources */,
 				C49581C21E16D11500B75E1D /* SignUpViewController.m in Sources */,
 				C4FF5DDC1E7C611400FE77B0 /* SideMenuTableViewCell.m in Sources */,
 				C444170B1E54C54800A0D3BE /* Helpers.m in Sources */,
@@ -322,6 +333,7 @@
 				C47366CD1E4F0FB0003B50E0 /* HomeViewController.m in Sources */,
 				C45378591E708FFD00FED9FC /* UIViewController+Utilities.m in Sources */,
 				C4BECFA91E61832600E44C88 /* DataManager.m in Sources */,
+				C4149C431E8593FD005EF93E /* WalkthroughCollectionViewCell.m in Sources */,
 				C4EB6C851E69F8F900FF3A27 /* TaskTableViewCell.m in Sources */,
 				C4FF5DD91E7C52C300FE77B0 /* SideMenuViewController.m in Sources */,
 				C4EB6C541E69E56B00FF3A27 /* ToDo.xcdatamodeld in Sources */,

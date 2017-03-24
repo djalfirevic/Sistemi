@@ -11,17 +11,22 @@
 #import "DateCollectionViewCell.h"
 #import "TaskTableViewCell.h"
 
-@interface HomeViewController() <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+#define kSearchTextViewHeight 64.0f
+
+@interface HomeViewController() <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (weak, nonatomic) IBOutlet UILabel *tasksLabel;
 @property (weak, nonatomic) IBOutlet UILabel *monthYearLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchTextFieldViewTopConstraint;
 @property (strong, nonatomic) NSMutableArray *datesArray;
 @property (strong, nonatomic) NSMutableArray *tasksArray;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (strong, nonatomic) DBTask *selectedTask;
+@property (nonatomic, readonly) BOOL filterActive;
 @end
 
 @implementation HomeViewController
@@ -43,6 +48,10 @@
     [self configureTasks];
 }
 
+- (BOOL)filterActive {
+    return self.searchTextField.text.length > 0;
+}
+
 #pragma mark - Actions
 
 - (IBAction)menuButtonTapped {
@@ -50,7 +59,12 @@
 }
 
 - (IBAction)searchButtonTapped {
+    self.searchTextFieldViewTopConstraint.constant = 0.0f;
+    [UIView animateWithDuration:kAnimationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
 
+    [self.searchTextField becomeFirstResponder];
 }
 
 - (IBAction)previousButtonTapped {
@@ -99,6 +113,10 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (IBAction)searchTextFieldEditingChanged:(UITextField *)sender {
+    [self performSearchWithText:sender.text];
+}
+
 #pragma mark - Private API
 
 - (void)configureWelcomeLabel {
@@ -145,7 +163,19 @@
 }
 
 - (void)configureUserImage {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:USER_IMAGE]) {
+        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:USER_IMAGE];
+        UIImage *image = [[UIImage alloc] initWithData:data];
+        self.userImageView.image = image;
+    }
+}
 
+- (void)configureTextFieldPlaceholder {
+    NSDictionary *attributes = @{
+                                 NSForegroundColorAttributeName: [UIColor whiteColor]
+                                 };
+
+    self.searchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.searchTextField.placeholder attributes:attributes];
 }
 
 - (void)scrollToCurrentDay {
@@ -163,6 +193,10 @@
     self.selectedDate = [calendar dateFromComponents:dateComponents];
 }
 
+- (void)performSearchWithText:(NSString *)text {
+    NSLog(@"%d", self.filterActive);
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -170,14 +204,8 @@
 
     [self configureWelcomeLabel];
     [self configureUserImage];
+    [self configureTextFieldPlaceholder];
     self.tableView.tableFooterView = [[UIView alloc] init];
-
-    // Load image from NSUserDefaults
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:USER_IMAGE]) {
-        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:USER_IMAGE];
-        UIImage *image = [[UIImage alloc] initWithData:data];
-        self.userImageView.image = image;
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -282,6 +310,20 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+
+    // Hide Search Text Field View.
+    self.searchTextFieldViewTopConstraint.constant = -kSearchTextViewHeight;
+    [UIView animateWithDuration:kAnimationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
+
+    return YES;
 }
 
 @end
