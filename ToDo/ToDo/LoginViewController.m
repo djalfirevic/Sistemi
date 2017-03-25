@@ -20,7 +20,7 @@
 #pragma mark - Public API
 
 - (void)configurePlaceholders {
-    self.attributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    self.attributes = @{ NSForegroundColorAttributeName: [UIColor whiteColor] };
     
     [self configureTextField:self.usernameTextField];
     [self configureTextField:self.passwordTextField];

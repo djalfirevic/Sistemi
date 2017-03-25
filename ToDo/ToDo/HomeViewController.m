@@ -180,10 +180,8 @@
     }
 }
 
-- (void)configureTextFieldPlaceholder {
-    NSDictionary *attributes = @{
-                                 NSForegroundColorAttributeName: [UIColor whiteColor]
-                                 };
+- (void)configurePlaceholder {
+    NSDictionary *attributes = @{ NSForegroundColorAttributeName: [UIColor whiteColor] };
 
     self.searchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.searchTextField.placeholder attributes:attributes];
 }
@@ -231,7 +229,7 @@
 
     [self configureWelcomeLabel];
     [self configureUserImage];
-    [self configureTextFieldPlaceholder];
+    [self configurePlaceholder];
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
