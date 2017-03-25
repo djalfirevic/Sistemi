@@ -73,13 +73,13 @@
 
 - (void)fillCounts {
     NSInteger completedCount = [DATA_MANAGER numberOfTasksPerTaskGroup:TaskGroupCompleted];
-    self.completedCountLabel.text = [NSString stringWithFormat:@"%ld", completedCount];
+    self.completedCountLabel.text = [NSString stringWithFormat:@"%ld", (long)completedCount];
 
     NSInteger notCompletedCount = [DATA_MANAGER numberOfTasksPerTaskGroup:TaskGroupNotCompleted];
-    self.notCompletedCountLabel.text = [NSString stringWithFormat:@"%ld", notCompletedCount];
+    self.notCompletedCountLabel.text = [NSString stringWithFormat:@"%ld", (long)notCompletedCount];
 
     NSInteger inProgressCount = [DATA_MANAGER numberOfTasksPerTaskGroup:TaskGroupInProgress];
-    self.inProgressCountLabel.text = [NSString stringWithFormat:@"%ld", inProgressCount];
+    self.inProgressCountLabel.text = [NSString stringWithFormat:@"%ld", (long)inProgressCount];
 }
 
 #pragma mark - View lifecycle

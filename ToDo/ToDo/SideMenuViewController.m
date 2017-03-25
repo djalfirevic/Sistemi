@@ -67,7 +67,7 @@
     SideMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
     cell.subtitleLabel.hidden = (indexPath.row == 0) ? NO : YES;
-    cell.subtitleLabel.text = [NSString stringWithFormat:@"%ld", [DATA_MANAGER numberOfTasksForToday]];
+    cell.subtitleLabel.text = [NSString stringWithFormat:@"%ld", (long)[DATA_MANAGER numberOfTasksForToday]];
     cell.titleLabel.text = self.itemsArray[indexPath.row];
 
     return cell;

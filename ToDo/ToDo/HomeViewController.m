@@ -150,7 +150,7 @@
 }
 
 - (void)configureTasksLabel {
-    self.tasksLabel.text = [NSString stringWithFormat:@"%ld", self.tasksArray.count];
+    self.tasksLabel.text = [NSString stringWithFormat:@"%ld", (unsigned long)self.tasksArray.count];
     self.tasksLabel.hidden = (self.tasksArray.count == 0) ? YES : NO;
 }
 

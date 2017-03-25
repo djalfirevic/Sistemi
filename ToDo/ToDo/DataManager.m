@@ -129,7 +129,7 @@
 }
 
 - (NSInteger)numberOfTasksPerTaskGroup:(TaskGroup)group {
-    NSString *filter = [NSString stringWithFormat:@"group = %ld", group];
+    NSString *filter = [NSString stringWithFormat:@"group = %ld", (long)group];
 
     NSArray *tasksArray = [self fetchEntity:NSStringFromClass(DBTask.class)
                                  withFilter:filter
