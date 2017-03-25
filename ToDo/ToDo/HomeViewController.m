@@ -16,6 +16,7 @@
 @interface HomeViewController() <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *filterImageView;
 @property (weak, nonatomic) IBOutlet UILabel *tasksLabel;
 @property (weak, nonatomic) IBOutlet UILabel *monthYearLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -24,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchTextFieldViewTopConstraint;
 @property (strong, nonatomic) NSMutableArray *datesArray;
 @property (strong, nonatomic) NSMutableArray *tasksArray;
+@property (strong, nonatomic) NSMutableArray *filteredTasksArray;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (strong, nonatomic) DBTask *selectedTask;
 @property (nonatomic, readonly) BOOL filterActive;
@@ -39,6 +41,14 @@
     }
 
     return _datesArray;
+}
+
+- (NSMutableArray *)filteredTasksArray {
+    if (!_filteredTasksArray) {
+        _filteredTasksArray = [[NSMutableArray alloc] init];
+    }
+
+    return _filteredTasksArray;
 }
 
 - (void)setSelectedDate:(NSDate *)selectedDate {
@@ -194,7 +204,24 @@
 }
 
 - (void)performSearchWithText:(NSString *)text {
-    NSLog(@"%d", self.filterActive);
+    self.filterImageView.hidden = (text.length > 0) ? NO : YES;
+
+    // Remove all tasks from filteredTasksArray.
+    [self.filteredTasksArray removeAllObjects];
+
+    // Find tasks containing search text.
+    for (DBTask *task in self.tasksArray) {
+        if ([task.title containsString:text]) {
+            [self.filteredTasksArray addObject:task];
+        }
+    }
+
+    // Reload table view.
+    [self.tableView reloadData];
+}
+
+- (DBTask *)taskForIndexPath:(NSIndexPath *)indexPath {
+    return (self.filterActive) ? self.filteredTasksArray[indexPath.row] : self.tasksArray[indexPath.row];
 }
 
 #pragma mark - View lifecycle
@@ -255,13 +282,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.filterActive) {
+        return self.filteredTasksArray.count;
+    }
+
     return self.tasksArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    cell.task = self.tasksArray[indexPath.row];
+    cell.task = [self taskForIndexPath:indexPath];
 
     return cell;
 }
@@ -271,7 +302,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    self.selectedTask = self.tasksArray[indexPath.row];
+    self.selectedTask = [self taskForIndexPath:indexPath];
     [self performSegueWithIdentifier:@"TaskSegue" sender:nil];
 }
 
@@ -281,9 +312,14 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        DBTask *task = self.tasksArray[indexPath.row];
+        DBTask *task = [self taskForIndexPath:indexPath];
 
-        [self.tasksArray removeObject:task];
+        if (self.filterActive) {
+            [self.filteredTasksArray removeObject:task];
+        } else {
+            [self.tasksArray removeObject:task];
+        }
+
         [DATA_MANAGER deleteObject:task];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         [self configureTasksLabel];
