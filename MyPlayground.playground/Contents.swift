@@ -163,3 +163,31 @@ print(bTestStruct.string) // !!!
  private - allows use only from the enclosing declaration.
 
  */
+
+// 10. Functions.
+
+func add(numberOne: Int, numberTwo: Int) -> Int {
+    return numberOne + numberTwo
+}
+
+add(numberOne: 3, numberTwo: 4)
+
+func addNumberOne(_ numberOne: Int, with numberTwo: Int) -> Int {
+    return numberOne + numberTwo
+}
+
+addNumberOne(3, with: 4)
+
+// guard (early exit).
+
+func addWithOptionals(_ numberOne: Int, with numberTwo: Int?) -> Int {
+    guard let number = numberTwo else {
+        return numberOne
+    }
+
+    return numberOne + number
+}
+
+addWithOptionals(3, with: nil)
+addWithOptionals(3, with: 4)
+
