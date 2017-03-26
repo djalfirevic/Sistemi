@@ -191,3 +191,40 @@ func addWithOptionals(_ numberOne: Int, with numberTwo: Int?) -> Int {
 addWithOptionals(3, with: nil)
 addWithOptionals(3, with: 4)
 
+// Inner functions.
+
+func isValidIP(_ ip: String?) -> Bool {
+    guard let ipAddress = ip else {
+        return false
+    }
+
+    let octets = ipAddress.components(separatedBy: ".")
+    guard octets.count == 4 else {
+        return false
+    }
+
+    func validOctet(_ octet: String) -> Bool {
+        if let number = Int(octet) {
+            if number >= 0 && number < 256 {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        return false
+    }
+
+    for octet in octets {
+        guard validOctet(octet) else {
+            return false
+        }
+    }
+
+    return true
+}
+
+isValidIP(nil)
+isValidIP("192.168.1.256")
+isValidIP("192.168.1.1")
+
