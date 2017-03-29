@@ -118,7 +118,7 @@ print(resultsViaFunctionalProgramming)
 
 // 8. Structs vs. Classes.
 
-// Pass-by-reference.
+// Reference type.
 class TestClass {
     var string = "class"
 }
@@ -131,7 +131,7 @@ aTestClass.string = "changed"
 print(aTestClass.string)
 print(bTestClass.string)
 
-// Pass-by-value.
+// Value type.
 struct TestStruct {
     var string = "struct"
 }
@@ -144,7 +144,7 @@ aTestStruct.string = "changed"
 print(aTestStruct.string)
 print(bTestStruct.string) // !!!
 
-// Example: NSDate is a class, Date is a 'wrapper strct' around NSDate. So it is value type instead of reference type.
+// Example: NSDate is a class, Date is a 'wrapper struct' around NSDate. So it is value type instead of reference type.
 
 // Apple's suggestion: choose wisely, but prefer to use structs rather than classes.
 
@@ -166,6 +166,7 @@ print(bTestStruct.string) // !!!
 
 // 10. Functions.
 
+// - (NSInteger)add:(NSInteger)numberOne with:(NSInteger)numberTwo;
 func add(numberOne: Int, numberTwo: Int) -> Int {
     return numberOne + numberTwo
 }
@@ -190,6 +191,28 @@ func addWithOptionals(_ numberOne: Int, with numberTwo: Int?) -> Int {
 
 addWithOptionals(3, with: nil)
 addWithOptionals(3, with: 4)
+
+func addWithTwoOptionals(_ numberOne: Int?, with numberTwo: Int?) -> Int {
+//    if let one = numberOne {
+//        if let two = numberTwo {
+//            return one + two
+//        } else {
+//            return one
+//        }
+//    } else if let two = numberTwo {
+//        return two
+//    }
+
+    guard let one = numberOne, let two = numberTwo  else {
+        return 0
+    }
+
+    return one + two
+}
+
+addWithTwoOptionals(3, with: nil)
+addWithTwoOptionals(nil, with: 4)
+addWithTwoOptionals(3, with: 4)
 
 // Inner functions.
 
@@ -228,3 +251,16 @@ isValidIP(nil)
 isValidIP("192.168.1.256")
 isValidIP("192.168.1.1")
 
+// 11. Operator overloading.
+
+func ==(lhs: TestClass, rhs: TestClass) -> Bool {
+    return lhs.string == rhs.string
+}
+
+let objectA = TestClass()
+objectA.string = "Djuro"
+
+let objectB = TestClass()
+objectB.string = "Milan"
+
+print(objectA == objectB)
