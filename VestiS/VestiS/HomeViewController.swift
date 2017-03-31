@@ -8,12 +8,41 @@
 
 import UIKit
 
-let url = "http://www.brzevesti.net/api/news"
-
 class HomeViewController: UIViewController {
 
     // MARK: - Properties
+    @IBOutlet weak var tableView: UITableView!
     var articles = [Article]()
+
+    // MARK: - Public API
+    func loadArticles() {
+        guard isConnected() else {
+            return
+        }
+
+        if let url = URL(string: apiUrl) {
+            let configuration = URLSessionConfiguration.default
+            let session = URLSession(configuration: configuration)
+            session.dataTask(with: url, completionHandler: { (data, response, error) in
+
+                if error != nil {
+                    print("Error: \(error!.localizedDescription)")
+                }
+
+                if data != nil {
+
+                }
+            })
+        }
+    }
+
+    // MARK: - View lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        tableView.tableFooterView = UIView()
+        loadArticles()
+    }
 
 }
 

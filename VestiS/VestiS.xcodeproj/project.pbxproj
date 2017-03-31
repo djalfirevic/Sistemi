@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C406B2F51E8EC4D90063C49F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C406B2F41E8EC4D90063C49F /* Constants.swift */; };
+		C406B2F71E8EC6140063C49F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C406B2F61E8EC6140063C49F /* WebViewController.swift */; };
+		C406B2F91E8ECBC60063C49F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C406B2F81E8ECBC60063C49F /* Reachability.swift */; };
+		C406B2FB1E8ED0EC0063C49F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C406B2FA1E8ED0EC0063C49F /* Extensions.swift */; };
+		C406B2FD1E8ED7720063C49F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C406B2FC1E8ED7720063C49F /* Main.storyboard */; };
 		C420302D1E8C448B00BB312A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420302C1E8C448B00BB312A /* AppDelegate.swift */; };
 		C420302F1E8C448B00BB312A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420302E1E8C448B00BB312A /* HomeViewController.swift */; };
-		C42030321E8C448B00BB312A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42030301E8C448B00BB312A /* Main.storyboard */; };
 		C42030341E8C448B00BB312A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42030331E8C448B00BB312A /* Assets.xcassets */; };
 		C42030371E8C448B00BB312A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42030351E8C448B00BB312A /* LaunchScreen.storyboard */; };
 		C420303F1E8C450000BB312A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420303E1E8C450000BB312A /* Article.swift */; };
@@ -17,10 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C406B2F41E8EC4D90063C49F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C406B2F61E8EC6140063C49F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C406B2F81E8ECBC60063C49F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		C406B2FA1E8ED0EC0063C49F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C406B2FC1E8ED7720063C49F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C42030291E8C448B00BB312A /* VestiS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VestiS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C420302C1E8C448B00BB312A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C420302E1E8C448B00BB312A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C42030311E8C448B00BB312A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C42030331E8C448B00BB312A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42030361E8C448B00BB312A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42030381E8C448B00BB312A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,9 +68,13 @@
 			children = (
 				C420302C1E8C448B00BB312A /* AppDelegate.swift */,
 				C420302E1E8C448B00BB312A /* HomeViewController.swift */,
+				C406B2F61E8EC6140063C49F /* WebViewController.swift */,
+				C406B2FA1E8ED0EC0063C49F /* Extensions.swift */,
 				C420303E1E8C450000BB312A /* Article.swift */,
 				C42030401E8C459F00BB312A /* ArticleTableViewCell.swift */,
-				C42030301E8C448B00BB312A /* Main.storyboard */,
+				C406B2F41E8EC4D90063C49F /* Constants.swift */,
+				C406B2F81E8ECBC60063C49F /* Reachability.swift */,
+				C406B2FC1E8ED7720063C49F /* Main.storyboard */,
 				C42030331E8C448B00BB312A /* Assets.xcassets */,
 				C42030351E8C448B00BB312A /* LaunchScreen.storyboard */,
 				C42030381E8C448B00BB312A /* Info.plist */,
@@ -129,9 +141,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C406B2FD1E8ED7720063C49F /* Main.storyboard in Resources */,
 				C42030371E8C448B00BB312A /* LaunchScreen.storyboard in Resources */,
 				C42030341E8C448B00BB312A /* Assets.xcassets in Resources */,
-				C42030321E8C448B00BB312A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C406B2F91E8ECBC60063C49F /* Reachability.swift in Sources */,
+				C406B2F51E8EC4D90063C49F /* Constants.swift in Sources */,
+				C406B2F71E8EC6140063C49F /* WebViewController.swift in Sources */,
+				C406B2FB1E8ED0EC0063C49F /* Extensions.swift in Sources */,
 				C42030411E8C459F00BB312A /* ArticleTableViewCell.swift in Sources */,
 				C420302F1E8C448B00BB312A /* HomeViewController.swift in Sources */,
 				C420302D1E8C448B00BB312A /* AppDelegate.swift in Sources */,
@@ -152,14 +168,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C42030301E8C448B00BB312A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C42030311E8C448B00BB312A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C42030351E8C448B00BB312A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -309,6 +317,7 @@
 				C420303D1E8C448B00BB312A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

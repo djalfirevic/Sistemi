@@ -19,25 +19,7 @@ class ArticleTableViewCell: UITableViewCell {
             titleLabel.text = article.title
             portalLabel.text = article.portal
             coverImageView.layer.cornerRadius = coverImageView.frame.size.width/2
-            coverImageView.loadImageFromUrl(article.imageUrl)
-        }
-    }
-
-}
-
-extension UIImageView {
-
-    func loadImageFromUrl(_ urlString: String) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let url = URL(string: urlString) {
-                if let data = try? Data(contentsOf: url) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self.image = image
-                        }
-                    }
-                }
-            }
+            coverImageView.loadImage(from: article.imageUrl)
         }
     }
 
