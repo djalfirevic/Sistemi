@@ -59,6 +59,7 @@ extension WebViewController: UIWebViewDelegate {
 
     func webViewDidFinishLoad(_ webView: UIWebView) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        spinnerView.stopAnimating()
     }
 
 }

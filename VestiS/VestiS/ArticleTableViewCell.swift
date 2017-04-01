@@ -19,6 +19,7 @@ class ArticleTableViewCell: UITableViewCell {
             titleLabel.text = article.title
             portalLabel.text = article.portal
             coverImageView.layer.cornerRadius = coverImageView.frame.size.width/2
+            coverImageView.layer.masksToBounds = true
             coverImageView.loadImage(from: article.imageUrl)
         }
     }

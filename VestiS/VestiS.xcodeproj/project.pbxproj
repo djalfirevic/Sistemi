@@ -18,9 +18,12 @@
 		C42030371E8C448B00BB312A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42030351E8C448B00BB312A /* LaunchScreen.storyboard */; };
 		C420303F1E8C450000BB312A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420303E1E8C450000BB312A /* Article.swift */; };
 		C42030411E8C459F00BB312A /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42030401E8C459F00BB312A /* ArticleTableViewCell.swift */; };
+		FA57DA275C3B5B66D82843D1 /* Pods_VestiS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22C4F8242F4F0A7F7EC73FE /* Pods_VestiS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D01EE1180F94679B8FB0E54 /* Pods-VestiS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VestiS.release.xcconfig"; path = "Pods/Target Support Files/Pods-VestiS/Pods-VestiS.release.xcconfig"; sourceTree = "<group>"; };
+		480BE6D2A56131679AD6665E /* Pods-VestiS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VestiS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VestiS/Pods-VestiS.debug.xcconfig"; sourceTree = "<group>"; };
 		C406B2F41E8EC4D90063C49F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C406B2F61E8EC6140063C49F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C406B2F81E8ECBC60063C49F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		C42030381E8C448B00BB312A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C420303E1E8C450000BB312A /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		C42030401E8C459F00BB312A /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		E22C4F8242F4F0A7F7EC73FE /* Pods_VestiS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VestiS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA57DA275C3B5B66D82843D1 /* Pods_VestiS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0428E46A78FB6FE9AAC1C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				480BE6D2A56131679AD6665E /* Pods-VestiS.debug.xcconfig */,
+				0D01EE1180F94679B8FB0E54 /* Pods-VestiS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		89A2B2FF6950DDE8297084D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E22C4F8242F4F0A7F7EC73FE /* Pods_VestiS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C42030201E8C448B00BB312A = {
 			isa = PBXGroup;
 			children = (
 				C420302B1E8C448B00BB312A /* VestiS */,
 				C420302A1E8C448B00BB312A /* Products */,
+				5C0428E46A78FB6FE9AAC1C4 /* Pods */,
+				89A2B2FF6950DDE8297084D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C420303B1E8C448B00BB312A /* Build configuration list for PBXNativeTarget "VestiS" */;
 			buildPhases = (
+				47782A6C0CD1EAF4560C14C2 /* [CP] Check Pods Manifest.lock */,
 				C42030251E8C448B00BB312A /* Sources */,
 				C42030261E8C448B00BB312A /* Frameworks */,
 				C42030271E8C448B00BB312A /* Resources */,
+				365DAD44DE38548F5CB8A6A7 /* [CP] Embed Pods Frameworks */,
+				7E16FFACCED5B946E096589D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		365DAD44DE38548F5CB8A6A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VestiS/Pods-VestiS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47782A6C0CD1EAF4560C14C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E16FFACCED5B946E096589D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VestiS/Pods-VestiS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C42030251E8C448B00BB312A /* Sources */ = {
@@ -276,6 +351,7 @@
 		};
 		C420303C1E8C448B00BB312A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 480BE6D2A56131679AD6665E /* Pods-VestiS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VestiS/Info.plist;
@@ -288,6 +364,7 @@
 		};
 		C420303D1E8C448B00BB312A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D01EE1180F94679B8FB0E54 /* Pods-VestiS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VestiS/Info.plist;

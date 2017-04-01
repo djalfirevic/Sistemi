@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class HomeViewController: UIViewController {
 
@@ -15,6 +16,41 @@ class HomeViewController: UIViewController {
     var articles = [Article]()
 
     // MARK: - Public API
+    func loadArticlesWithSwiftyJSON() {
+        guard isConnected() else {
+            return
+        }
+
+        if let url = URL(string: apiUrl) {
+            let configuration = URLSessionConfiguration.default
+            let request = URLRequest(url: url)
+            let session = URLSession(configuration: configuration)
+            let task = session.dataTask(with: request, completionHandler: { [unowned self] (data, response, error) in
+
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                }
+
+                if let data = data {
+                    let json = JSON(data)
+
+                    DispatchQueue.main.async { [unowned self] in
+                        if let news = json["news"].array {
+                            for newsJson in news {
+                                let article = Article(with: newsJson)
+                                self.articles.append(article)
+                            }
+
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            })
+            
+            task.resume()
+        }
+    }
+
     func loadArticles() {
         guard isConnected() else {
             return
@@ -22,17 +58,44 @@ class HomeViewController: UIViewController {
 
         if let url = URL(string: apiUrl) {
             let configuration = URLSessionConfiguration.default
+            let request = URLRequest(url: url)
             let session = URLSession(configuration: configuration)
-            session.dataTask(with: url, completionHandler: { (data, response, error) in
+            let task = session.dataTask(with: request, completionHandler: { [unowned self] (data, response, error) in
 
-                if error != nil {
-                    print("Error: \(error!.localizedDescription)")
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
                 }
 
-                if data != nil {
+                if let data = data {
+                    // try, try?, try!
 
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                        self.parseArticles(json: json)
+                    } catch {
+                        print("Error: \(error.localizedDescription)")
+                    }
                 }
             })
+
+            task.resume()
+        }
+    }
+
+    func parseArticles(json: [String: Any]?) {
+        guard let json = json else {
+            return
+        }
+
+        DispatchQueue.main.async { [unowned self] in
+            if let news = json["news"] as? [[String: Any]] {
+                for newsJson in news {
+                    let article = Article(with: newsJson)
+                    self.articles.append(article)
+                }
+
+                self.tableView.reloadData()
+            }
         }
     }
 
@@ -41,7 +104,28 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.tableFooterView = UIView()
-        loadArticles()
+        //loadArticles()
+        loadArticlesWithSwiftyJSON()
+    }
+
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+
+        let article = articles[indexPath.row]
+
+        // 1. version.
+        if segue.destination is WebViewController {
+            let toViewController = segue.destination as! WebViewController
+            toViewController.urlString = article.url
+        }
+
+        // 2. version.
+        if let toViewController = segue.destination as? WebViewController {
+            toViewController.urlString = article.url
+        }
     }
 
 }
