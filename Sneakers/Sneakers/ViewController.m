@@ -11,8 +11,8 @@
 #import "SneakerCollectionViewCell.h"
 
 @interface ViewController() <UICollectionViewDataSource, UICollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) NSMutableArray *itemsArray;
 @end
 
@@ -62,7 +62,7 @@
 - (void)animateCell:(UICollectionViewCell *)cell {
     CGRect frame = cell.frame;
     CGPoint translation = [self.collectionView.panGestureRecognizer translationInView:self.collectionView.superview];
-    if (translation.x > 0) {
+    if (translation.x > 0.0f) {
         cell.frame = CGRectMake(frame.origin.x - 1000.0f, -500.0f, 0.0f, 0.0f);
     } else {
         cell.frame = CGRectMake(frame.origin.x + 1000.0f, -500.0f, 0.0f, 0.0f);

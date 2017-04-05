@@ -36,11 +36,11 @@
 #pragma mark - Public API
 
 - (NSString *)formattedPrice {
-    return [NSString stringWithFormat:@"$ %ld", self.price];
+    return [NSString stringWithFormat:@"$%ld", self.price];
 }
 
 - (NSString *)formattedGender {
-    return self.gender == MALE_GENDER ? @"MEN'S SHOES" : @"WOMEN'S SHOES";
+    return self.gender == MALE_GENDER ? @"MEN'S SHOE" : @"WOMEN'S SHOE";
  }
 
 @end

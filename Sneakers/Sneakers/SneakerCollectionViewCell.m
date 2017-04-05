@@ -63,8 +63,8 @@ static CGFloat DegreesToRadians(CGFloat degrees) { return degrees * M_PI / 180; 
 #pragma mark - Private API
 
 - (void)rotateView:(UIView *)view byDegree:(CGFloat)degrees {
-    CGAffineTransform t = CGAffineTransformMakeRotation(DegreesToRadians(degrees));
-    view.transform = t;
+    CGAffineTransform transform = CGAffineTransformMakeRotation(DegreesToRadians(degrees));
+    view.transform = transform;
 }
 
 @end
