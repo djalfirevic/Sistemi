@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4412DDA1D840C4000698F60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4412DD91D840C4000698F60 /* main.m */; };
+		C4412DDD1D840C4000698F60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4412DDC1D840C4000698F60 /* AppDelegate.m */; };
+		C4412DE01D840C4000698F60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4412DDF1D840C4000698F60 /* ViewController.m */; };
+		C4412DE31D840C4000698F60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4412DE11D840C4000698F60 /* Main.storyboard */; };
+		C4412DE51D840C4000698F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4412DE41D840C4000698F60 /* Assets.xcassets */; };
+		C4412DE81D840C4000698F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4412DE61D840C4000698F60 /* LaunchScreen.storyboard */; };
+		C4412DF11D840DB400698F60 /* Sneaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C4412DF01D840DB400698F60 /* Sneaker.m */; };
+		C4412DF41D84170A00698F60 /* SneakerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4412DF31D84170A00698F60 /* SneakerCollectionViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C4412DD51D840C4000698F60 /* Sneakers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sneakers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4412DD91D840C4000698F60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4412DDB1D840C4000698F60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C4412DDC1D840C4000698F60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C4412DDE1D840C4000698F60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C4412DDF1D840C4000698F60 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C4412DE21D840C4000698F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4412DE41D840C4000698F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4412DE71D840C4000698F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4412DE91D840C4000698F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4412DEF1D840DB400698F60 /* Sneaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sneaker.h; sourceTree = "<group>"; };
+		C4412DF01D840DB400698F60 /* Sneaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sneaker.m; sourceTree = "<group>"; };
+		C4412DF21D84170A00698F60 /* SneakerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakerCollectionViewCell.h; sourceTree = "<group>"; };
+		C4412DF31D84170A00698F60 /* SneakerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakerCollectionViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4412DD21D840C4000698F60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4412DCC1D840C4000698F60 = {
+			isa = PBXGroup;
+			children = (
+				C4412DD71D840C4000698F60 /* Sneakers */,
+				C4412DD61D840C4000698F60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4412DD61D840C4000698F60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4412DD51D840C4000698F60 /* Sneakers.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4412DD71D840C4000698F60 /* Sneakers */ = {
+			isa = PBXGroup;
+			children = (
+				C4412DDB1D840C4000698F60 /* AppDelegate.h */,
+				C4412DDC1D840C4000698F60 /* AppDelegate.m */,
+				C4412DDE1D840C4000698F60 /* ViewController.h */,
+				C4412DDF1D840C4000698F60 /* ViewController.m */,
+				C4412DEF1D840DB400698F60 /* Sneaker.h */,
+				C4412DF01D840DB400698F60 /* Sneaker.m */,
+				C4412DF21D84170A00698F60 /* SneakerCollectionViewCell.h */,
+				C4412DF31D84170A00698F60 /* SneakerCollectionViewCell.m */,
+				C4412DE11D840C4000698F60 /* Main.storyboard */,
+				C4412DE41D840C4000698F60 /* Assets.xcassets */,
+				C4412DE61D840C4000698F60 /* LaunchScreen.storyboard */,
+				C4412DE91D840C4000698F60 /* Info.plist */,
+				C4412DD81D840C4000698F60 /* Supporting Files */,
+			);
+			path = Sneakers;
+			sourceTree = "<group>";
+		};
+		C4412DD81D840C4000698F60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4412DD91D840C4000698F60 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4412DD41D840C4000698F60 /* Sneakers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4412DEC1D840C4000698F60 /* Build configuration list for PBXNativeTarget "Sneakers" */;
+			buildPhases = (
+				C4412DD11D840C4000698F60 /* Sources */,
+				C4412DD21D840C4000698F60 /* Frameworks */,
+				C4412DD31D840C4000698F60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sneakers;
+			productName = Sneakers;
+			productReference = C4412DD51D840C4000698F60 /* Sneakers.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4412DCD1D840C4000698F60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Djuro Alfirevic";
+				TargetAttributes = {
+					C4412DD41D840C4000698F60 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C4412DD01D840C4000698F60 /* Build configuration list for PBXProject "Sneakers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4412DCC1D840C4000698F60;
+			productRefGroup = C4412DD61D840C4000698F60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4412DD41D840C4000698F60 /* Sneakers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4412DD31D840C4000698F60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4412DE81D840C4000698F60 /* LaunchScreen.storyboard in Resources */,
+				C4412DE51D840C4000698F60 /* Assets.xcassets in Resources */,
+				C4412DE31D840C4000698F60 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4412DD11D840C4000698F60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4412DE01D840C4000698F60 /* ViewController.m in Sources */,
+				C4412DF11D840DB400698F60 /* Sneaker.m in Sources */,
+				C4412DDD1D840C4000698F60 /* AppDelegate.m in Sources */,
+				C4412DDA1D840C4000698F60 /* main.m in Sources */,
+				C4412DF41D84170A00698F60 /* SneakerCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C4412DE11D840C4000698F60 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4412DE21D840C4000698F60 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4412DE61D840C4000698F60 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4412DE71D840C4000698F60 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4412DEA1D840C4000698F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C4412DEB1D840C4000698F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4412DED1D840C4000698F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Sneakers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rs.sistemi.Sneakers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C4412DEE1D840C4000698F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Sneakers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rs.sistemi.Sneakers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4412DD01D840C4000698F60 /* Build configuration list for PBXProject "Sneakers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4412DEA1D840C4000698F60 /* Debug */,
+				C4412DEB1D840C4000698F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4412DEC1D840C4000698F60 /* Build configuration list for PBXNativeTarget "Sneakers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4412DED1D840C4000698F60 /* Debug */,
+				C4412DEE1D840C4000698F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4412DCD1D840C4000698F60 /* Project object */;
+}
