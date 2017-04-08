@@ -80,11 +80,13 @@ class MadokaTextFieldView: UIView {
         borderLayer.fillColor = nil
         borderLayer.strokeColor = UIColor.red.cgColor
 
+        // Animate path.
         let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
         pathAnimation.duration = 1.0;
         pathAnimation.fromValue = CGFloat(0.0)
         pathAnimation.toValue = CGFloat(1.0)
         borderLayer.add(pathAnimation, forKey: "strokeEnd")
+        borderLayer.strokeEnd = 1.0
     }
 
     func close() {
@@ -93,6 +95,7 @@ class MadokaTextFieldView: UIView {
         pathAnimation.fromValue = CGFloat(1.0)
         pathAnimation.toValue = CGFloat(0.0)
         borderLayer.add(pathAnimation, forKey: "strokeEnd")
+        borderLayer.strokeEnd = 0.0
     }
 
     // MARK: - View lifecycle
