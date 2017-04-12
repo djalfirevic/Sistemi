@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ThirdParty' do
+  use_frameworks!
+
+  # Pods for ThirdParty
+  pod 'FBSDKCoreKit' 
+  pod 'FBSDKLoginKit'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+
+end
