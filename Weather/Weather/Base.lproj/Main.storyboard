@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccL-UL-zzX">
+                                <rect key="frame" x="67" y="28" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HVG-dg-UnU"/>
+                                    <constraint firstAttribute="height" constant="128" id="ajw-Iu-Nx0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsV-mF-9pg">
+                                <rect key="frame" x="188" y="164" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN0-af-qLe">
+                                <rect key="frame" x="188" y="172" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-mK-4k4">
+                                <rect key="frame" x="178" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TsV-mF-9pg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="79i-b8-yrX"/>
+                            <constraint firstItem="ccL-UL-zzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jjn-Xn-VSP"/>
+                            <constraint firstItem="ccL-UL-zzX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TcV-kK-nUS"/>
+                            <constraint firstItem="KN0-af-qLe" firstAttribute="top" secondItem="TsV-mF-9pg" secondAttribute="bottom" constant="8" id="WBi-p3-VIy"/>
+                            <constraint firstItem="TsV-mF-9pg" firstAttribute="top" secondItem="ccL-UL-zzX" secondAttribute="bottom" constant="8" id="Y3M-dT-Z1e"/>
+                            <constraint firstItem="DgH-mK-4k4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dWV-Gv-8bC"/>
+                            <constraint firstItem="DgH-mK-4k4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="riW-GZ-qrx"/>
+                            <constraint firstItem="KN0-af-qLe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wf6-jG-ZZs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ccL-UL-zzX" id="g0m-Ze-Zgl"/>
+                        <outlet property="maxTemperatureLabel" destination="TsV-mF-9pg" id="gIe-Li-BrH"/>
+                        <outlet property="minTemperatureLabel" destination="KN0-af-qLe" id="nFn-Dl-d7b"/>
+                        <outlet property="spinnerView" destination="DgH-mK-4k4" id="lgY-xI-tP8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
