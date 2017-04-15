@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var frameImageView: UIImageView!
     @IBOutlet weak var userImageView: UIImageView!
-    var frames: [UIImage] = [
+    var frames = [
         #imageLiteral(resourceName: "bronze"),
         #imageLiteral(resourceName: "love"),
         #imageLiteral(resourceName: "metal"),
