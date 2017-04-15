@@ -15,6 +15,9 @@
 		C47AF7A61D365E680051F1D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47AF7A41D365E680051F1D6 /* LaunchScreen.storyboard */; };
 		C4AFEFE11EA2145300852AD6 /* JSONNullChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFEFDE1EA2145300852AD6 /* JSONNullChecker.m */; };
 		C4AFEFE21EA2145300852AD6 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFEFE01EA2145300852AD6 /* Weather.m */; };
+		C4AFEFE51EA220BF00852AD6 /* ForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFEFE41EA220BF00852AD6 /* ForecastViewController.m */; };
+		C4AFEFE81EA220FF00852AD6 /* WeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFEFE71EA220FF00852AD6 /* WeatherCollectionViewCell.m */; };
+		C4AFEFEB1EA2214A00852AD6 /* TodayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFEFEA1EA2214A00852AD6 /* TodayCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,12 @@
 		C4AFEFDE1EA2145300852AD6 /* JSONNullChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONNullChecker.m; sourceTree = "<group>"; };
 		C4AFEFDF1EA2145300852AD6 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		C4AFEFE01EA2145300852AD6 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		C4AFEFE31EA220BF00852AD6 /* ForecastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastViewController.h; sourceTree = "<group>"; };
+		C4AFEFE41EA220BF00852AD6 /* ForecastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastViewController.m; sourceTree = "<group>"; };
+		C4AFEFE61EA220FF00852AD6 /* WeatherCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewCell.h; sourceTree = "<group>"; };
+		C4AFEFE71EA220FF00852AD6 /* WeatherCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewCell.m; sourceTree = "<group>"; };
+		C4AFEFE91EA2214A00852AD6 /* TodayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayCollectionViewCell.h; sourceTree = "<group>"; };
+		C4AFEFEA1EA2214A00852AD6 /* TodayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +77,12 @@
 				C47AF79A1D365E680051F1D6 /* AppDelegate.m */,
 				C47AF79C1D365E680051F1D6 /* ViewController.h */,
 				C47AF79D1D365E680051F1D6 /* ViewController.m */,
+				C4AFEFE31EA220BF00852AD6 /* ForecastViewController.h */,
+				C4AFEFE41EA220BF00852AD6 /* ForecastViewController.m */,
+				C4AFEFE61EA220FF00852AD6 /* WeatherCollectionViewCell.h */,
+				C4AFEFE71EA220FF00852AD6 /* WeatherCollectionViewCell.m */,
+				C4AFEFE91EA2214A00852AD6 /* TodayCollectionViewCell.h */,
+				C4AFEFEA1EA2214A00852AD6 /* TodayCollectionViewCell.m */,
 				C4AFEFDD1EA2145300852AD6 /* JSONNullChecker.h */,
 				C4AFEFDE1EA2145300852AD6 /* JSONNullChecker.m */,
 				C4AFEFDF1EA2145300852AD6 /* Weather.h */,
@@ -160,7 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47AF79E1D365E680051F1D6 /* ViewController.m in Sources */,
+				C4AFEFE51EA220BF00852AD6 /* ForecastViewController.m in Sources */,
 				C47AF79B1D365E680051F1D6 /* AppDelegate.m in Sources */,
+				C4AFEFE81EA220FF00852AD6 /* WeatherCollectionViewCell.m in Sources */,
+				C4AFEFEB1EA2214A00852AD6 /* TodayCollectionViewCell.m in Sources */,
 				C4AFEFE11EA2145300852AD6 /* JSONNullChecker.m in Sources */,
 				C47AF7981D365E680051F1D6 /* main.m in Sources */,
 				C4AFEFE21EA2145300852AD6 /* Weather.m in Sources */,
