@@ -12,6 +12,7 @@
 		C45365B81E98C98C00482BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45365B61E98C98C00482BC9 /* Main.storyboard */; };
 		C45365BA1E98C98C00482BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C45365B91E98C98C00482BC9 /* Assets.xcassets */; };
 		C45365BD1E98C98C00482BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45365BB1E98C98C00482BC9 /* LaunchScreen.storyboard */; };
+		C4AFEFDC1EA204BD00852AD6 /* PhotoFrameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AFEFDB1EA204BD00852AD6 /* PhotoFrameCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C45365B91E98C98C00482BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C45365BC1E98C98C00482BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C45365BE1E98C98C00482BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4AFEFDB1EA204BD00852AD6 /* PhotoFrameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFrameCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				C45365B21E98C98C00482BC9 /* AppDelegate.swift */,
 				C45365B41E98C98C00482BC9 /* ViewController.swift */,
+				C4AFEFDB1EA204BD00852AD6 /* PhotoFrameCollectionViewCell.swift */,
 				C45365B61E98C98C00482BC9 /* Main.storyboard */,
 				C45365B91E98C98C00482BC9 /* Assets.xcassets */,
 				C45365BB1E98C98C00482BC9 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AFEFDC1EA204BD00852AD6 /* PhotoFrameCollectionViewCell.swift in Sources */,
 				C45365B51E98C98C00482BC9 /* ViewController.swift in Sources */,
 				C45365B31E98C98C00482BC9 /* AppDelegate.swift in Sources */,
 			);
@@ -301,6 +305,7 @@
 				C45365C31E98C98C00482BC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
