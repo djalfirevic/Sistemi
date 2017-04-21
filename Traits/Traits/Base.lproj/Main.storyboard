@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traits" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uz8-le-lMr" userLabel="Orange View">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="124"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9V-g9-tIn">
+                                        <rect key="frame" x="283.5" y="50" width="100" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.085259331597222224" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Jdl-ey-rvO">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                            </constraint>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.46666666670000001" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="t9V-g9-tIn" firstAttribute="centerX" secondItem="uz8-le-lMr" secondAttribute="centerX" id="co0-Hw-p81"/>
+                                    <constraint firstItem="t9V-g9-tIn" firstAttribute="top" secondItem="uz8-le-lMr" secondAttribute="top" constant="50" id="eLd-oT-fl9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3w-lO-kKd" userLabel="Turquoise View">
+                                <rect key="frame" x="0.0" y="124" width="667" height="251"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHZ-J3-Xrf">
+                                        <rect key="frame" x="659" y="243" width="0.0" height="0.0"/>
+                                        <color key="backgroundColor" red="0.68235294120000001" green="0.70196078429999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="QbT-XD-IzE">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="100" id="xdL-4i-AbL">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                                            </constraint>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.01980281746" green="0.88500792159999997" blue="0.91537686929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EHZ-J3-Xrf" secondAttribute="trailing" constant="8" id="SLg-4J-TmF"/>
+                                    <constraint firstAttribute="bottom" secondItem="EHZ-J3-Xrf" secondAttribute="bottom" constant="8" id="brI-wH-iao"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uz8-le-lMr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="99G-k9-u6d"/>
+                            <constraint firstItem="S3w-lO-kKd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HaA-cM-RQD"/>
+                            <constraint firstItem="uz8-le-lMr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="KT1-i5-ItP"/>
+                            <constraint firstItem="uz8-le-lMr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="R4k-ge-oQN"/>
+                            <constraint firstAttribute="trailing" secondItem="uz8-le-lMr" secondAttribute="trailing" id="VHK-RK-LQg"/>
+                            <constraint firstItem="S3w-lO-kKd" firstAttribute="top" secondItem="uz8-le-lMr" secondAttribute="bottom" id="fBa-Us-UCU"/>
+                            <constraint firstItem="uz8-le-lMr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="me5-G2-7wi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S3w-lO-kKd" secondAttribute="bottom" id="pA1-IC-e1r"/>
+                            <constraint firstAttribute="trailing" secondItem="S3w-lO-kKd" secondAttribute="trailing" id="uW2-V6-ejF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="R4k-ge-oQN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="KT1-i5-ItP"/>
+                                <include reference="R4k-ge-oQN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
